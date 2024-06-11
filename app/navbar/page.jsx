@@ -4,10 +4,16 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../page";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 
 function Navbar() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+    return null; // Handle the null case appropriately
+  }
+
+  const { theme, toggleTheme } = context;
   const navbarTheme = theme === "dark" ? "bg-dark-hero" : "bg-light-hero";
 
   return (

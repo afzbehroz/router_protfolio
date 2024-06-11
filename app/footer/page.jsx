@@ -4,7 +4,13 @@ import React, { useContext, useState } from "react";
 import { ThemeContext } from "../page";
 
 function Footer() {
-  const { theme } = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+    return null; // Handle the null case appropriately
+  }
+
+  const { theme } = context;
   const [isHovered, setIsHovered] = useState(false);
 
   return (

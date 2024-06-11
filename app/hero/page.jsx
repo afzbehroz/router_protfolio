@@ -5,7 +5,13 @@ import { ThemeContext } from "../page";
 import Projects from "../projects/page";
 
 function Hero() {
-  const { theme } = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+    return null; // Handle the null case appropriately
+  }
+
+  const { theme } = context;
   const heroClass = theme === "dark" ? "bg-dark-hero" : "bg-light-hero";
 
   return (
@@ -37,12 +43,12 @@ function Hero() {
               <img
                 src="html.png"
                 alt="html"
-                className="w-12 h-12 mr-2 ransition-transform transform hover:scale-110"
+                className="w-12 h-12 mr-2 transition-transform transform hover:scale-110"
               />
               <img
                 src="css.png"
                 alt="css"
-                className="w-12 h-12 mr-2 ransition-transform transform hover:scale-110"
+                className="w-12 h-12 mr-2 transition-transform transform hover:scale-110"
               />
               <img
                 src="tailwind_icon.png"
@@ -52,22 +58,22 @@ function Hero() {
               <img
                 src="git2.png"
                 alt="git"
-                className="w-11 h-11 mr-2 ransition-transform transform hover:scale-110"
+                className="w-11 h-11 mr-2 transition-transform transform hover:scale-110"
               />
               <img
                 src="github.png"
                 alt="github"
-                className="w-11 h-11 mr-2 ransition-transform transform hover:scale-110"
+                className="w-11 h-11 mr-2 transition-transform transform hover:scale-110"
               />
               <img
                 src="javascript.png"
                 alt="javascript"
-                className="w-10 h-10 mr-2 ransition-transform transform hover:scale-110"
+                className="w-10 h-10 mr-2 transition-transform transform hover:scale-110"
               />
               <img
                 src="microsoft_visual.png"
                 alt="Vs-Code"
-                className="w-12 h-12 mr-3 ransition-transform transform hover:scale-110"
+                className="w-12 h-12 mr-3 transition-transform transform hover:scale-110"
               />
             </div>
             <div className="flex justify-center mx-auto ">
