@@ -1,4 +1,4 @@
-"use client"; // Ensure this is at the top of your file
+"use client";
 
 import React, { useContext } from "react";
 import { ThemeContext } from "../page";
@@ -27,7 +27,6 @@ function Navbar() {
               </span>
             </Link>
           </li>
-
           <li>
             <a
               href="https://www.linkedin.com/in/behroz-afzali-b07316278/"

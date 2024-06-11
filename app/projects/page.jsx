@@ -1,10 +1,8 @@
-
 "use client";
-import React, { useContext, useState } from "react";
-import { ThemeContext } from "../page";
+
+import React from "react";
 
 function Projects() {
-  const styles = { color: "#F34E29" };
   const projects = [
     {
       id: 1,

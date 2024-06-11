@@ -7,6 +7,7 @@ import Projects from "../projects/page";
 function Hero() {
   const { theme } = useContext(ThemeContext);
   const heroClass = theme === "dark" ? "bg-dark-hero" : "bg-light-hero";
+
   return (
     <div
       className={`ml-0 m-8 flex flex-col justify-center items-center mr-auto min-h-screen overflow-x-hidden dark:bg-blue-900 text-white ${heroClass} `}
@@ -18,7 +19,6 @@ function Hero() {
               Hi👋, <br /> My name is Behroz
               <br /> I am a Front-end developer
             </h1>
-
             <img
               src="profile.jpeg"
               alt="Profile Picture"
@@ -49,7 +49,6 @@ function Hero() {
                 alt="tailwind"
                 className="w-12 h-12 mr-2 transition-transform transform hover:scale-110"
               />
-
               <img
                 src="git2.png"
                 alt="git"
